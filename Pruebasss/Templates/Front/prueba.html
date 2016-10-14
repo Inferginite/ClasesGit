@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    </head>
+    <body>
+	Usuarios Con promedio mayor a 8 : 
+	<br>
+	
+	{% for usuario  in usersFuture %}
+	
+	Nombre: {{usuario.nombre_usario}}  Promedio : {{usuario.promedio}}
+	<br>
+	
+	{% endfor %}
+	<br>
+	Usuarios Con promedio menor a 8:
+	
+	{% for usuario  in usersNoFuture %}
+	<br>
+	Nombre: {{usuario.nombre_usario}}  Promedio : {{usuario.promedio}}
+	<br>
+	
+	{% endfor %}
+	
+	Usuarios dados de baja:
+	
+	{% for usuario  in NoHope %}
+	<br>
+	Nombre: {{usuario.nombre_usario}}  Estatus de la baja : {{usuario.dado_de_bajo}}
+	<br>
+	
+	{% endfor %}
+	
+	Promedio General es : {{PromedioGeneral}}
+	
+    </body>
+</html>
