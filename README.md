@@ -1,2 +1,2 @@
 # ClasesGit
-Para todos
+Para todos.
