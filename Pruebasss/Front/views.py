@@ -69,3 +69,18 @@ class AldoRodriguezMoralesView(TemplateView):
 
         context['NoHope']=UsuariosUaq.objects.filter(dado_de_bajo=True)
         return context
+
+
+def diego(request):
+    alumnos=UsuariosUaq.objects.all()
+    sumatotal=0
+    for alumno in alumnos:
+        sumatotal=sumatotal+alumno.promedio
+    promedioGeneral=sumatotal/alumnos.count()
+    context= {}
+    context['PromedioGeneral']=promedioGeneral
+    context['usersFuture']=UsuariosUaq.objects.filter(promedio__gte=8.0)
+    context['usersNoFuture']=UsuariosUaq.objects.filter(promedio__lte=8.0)
+    context['NoHope']=UsuariosUaq.objects.filter(dado_de_bajo=True)
+
+    return render(request, 'Front/diego.html', context)

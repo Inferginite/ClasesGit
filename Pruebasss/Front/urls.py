@@ -20,6 +20,7 @@ urlpatterns = [
 
     url(r'^Jose-Cruz-Estefania-Almanza/$', views.JoseCruzEstefaniaAlmanza, name='Jose-Cruz-Estefania-Almanza'),
     url(r'^Aldo-Rodriguez-Morales/$', views.AldoRodriguezMoralesView.as_view(), name='AldoRodriguez'),
+    url(r'^Diego-Licea-Antonio/$', views.diego, name='front.diego'),
 
 ]
 
