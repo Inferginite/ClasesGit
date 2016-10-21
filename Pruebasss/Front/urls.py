@@ -17,6 +17,9 @@ urlpatterns = [
     url(r'^$', views.VistaIndex, name='index'),
     url(r'^test/$', views.VistaPrueba2, name='vistaprueba'),
 
+    
+    url(r'^Jose-Cruz-Estefania-Almanza/$', views.JoseCruzEstefaniaAlmanza, name='Jose-Cruz-Estefania-Almanza'),
+
 ]
 
 if settings.DEBUG:

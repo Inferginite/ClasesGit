@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -17,5 +16,3 @@ class UsuariosUaq(models.Model):
     dado_de_bajo=models.BooleanField(default=False)
     def __unicode__(self):
         return self.nombre_usario +' '+ str(self.promedio)
-    
-    
