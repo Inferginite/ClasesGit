@@ -1,0 +1,12 @@
+table{
+  border: 1px solid #ddd;
+}
+
+table th, table td{
+  padding:5px 10px;
+}
+
+
+h4{
+  margin: 10px 0;
+}
