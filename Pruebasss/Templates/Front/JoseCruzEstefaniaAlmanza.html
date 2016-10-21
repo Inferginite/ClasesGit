@@ -100,5 +100,38 @@
 <h1>Promedio General es : {{PromedioGeneral}}</h1>  
 </section>
 
+<hr>
+
+<section> 
+<h1>REPORTES</h1>  
+<div  class="tbl-header">
+<table cellpadding="0" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Creacion</th>
+      <th>Reporte</th>
+      <th>Numero reporte</th>
+    </tr>
+  </thead>
+</table>
+</div>
+<div  class="tbl-content">
+<table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
+    <tr>
+  {% for reporte  in Reportes %}
+    <td>{{reporte.usuario}}</td>
+    <td>{{reporte.hora}}</td>
+    <td>{{reporte.reporte_de_alguien}}</td>
+    <td>{{reporte.numero_de_reporte}}</td>
+  {% endfor %}
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+
+
 </body>
 </html>

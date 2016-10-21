@@ -16,3 +16,16 @@ class UsuariosUaq(models.Model):
     dado_de_bajo=models.BooleanField(default=False)
     def __unicode__(self):
         return self.nombre_usario +' '+ str(self.promedio)
+
+class ModelCruzEstefania(models.Model):
+    usuario=models.ForeignKey("UsuariosUaq", on_delete=models.CASCADE)
+    hora=models.TimeField()
+    creacion=models.DateTimeField("Creado",auto_now_add=True)
+    reporte_de_alguien=models.CharField(max_length=500)
+    numero_de_reporte=models.IntegerField()
+
+    class Meta:
+         verbose_name = "ModeloCruz"
+
+    def __unicode__(self):
+        return str(self.numero_de_reporte)
