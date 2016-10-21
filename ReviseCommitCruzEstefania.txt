@@ -1,0 +1,6 @@
+commit 1c2bf1eee8044bf7c7ea03e7621efb31c955e414
+Author: IvanAve <aveprime@gmail.com>
+Date:   Thu Oct 20 23:47:07 2016 -0500
+
+    Si alguien revisa este comentario y me lo informa tiene 3 puntos mas
+
