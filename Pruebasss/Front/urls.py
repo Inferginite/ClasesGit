@@ -17,8 +17,9 @@ urlpatterns = [
     url(r'^$', views.VistaIndex, name='index'),
     url(r'^test/$', views.VistaPrueba2, name='vistaprueba'),
 
-    
+
     url(r'^Jose-Cruz-Estefania-Almanza/$', views.JoseCruzEstefaniaAlmanza, name='Jose-Cruz-Estefania-Almanza'),
+    url(r'^Aldo-Rodriguez-Morales/$', views.AldoRodriguezMoralesView.as_view(), name='AldoRodriguez'),
 
 ]
 
@@ -26,5 +27,5 @@ if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^Media/(?P<path>.*)$', 'django.views.static.serve',
             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        
+
     )
