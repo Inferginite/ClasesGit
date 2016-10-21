@@ -2,4 +2,3 @@
 /.pydevproject
 /db.sqlite3
 *.pyc
-mydatabase
