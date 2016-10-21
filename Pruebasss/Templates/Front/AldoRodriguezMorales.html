@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+<link rel="shortcut icon" href="favicon.ico" />
+  <title>ARCHITECT Creative HTML5 Bootstrap Template </title>
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- REVOLUTION SLIDER -->
+  <link rel="stylesheet" href="{% static 'plugins/revolutionslider/css/settings.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/revolutionslider/css/layers.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/revolutionslider/css/navigation.css' %}">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="{% static 'fonts/icons/css/icons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.transitions.css' %}">
+  <!-- FANCYBOX -->
+  <link rel="stylesheet" href="{% static 'plugins/fancybox/jquery.fancybox.css' %}">
+  <!-- GOOGLE FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Poppins:300,400,600,700%7CHind:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/aldo.css' %}" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    </head>
+    <body>
+	Usuarios Con promedio mayor a 8 :
+	<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Promedio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usuario  in usersFuture %}
+    <tr>
+     <td>{{usuario.nombre_usario}} </td>
+     <td> {{usuario.promedio}} </td>
+    </tr>
+  	{% endfor %}
+  </tbody>
+</table>
+
+
+	<br>
+	Usuarios Con promedio menor a 8:
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario  in usersNoFuture %}
+      <tr>
+       <td>{{usuario.nombre_usario}} </td>
+       <td> {{usuario.promedio}} </td>
+      </tr>
+    	{% endfor %}
+    </tbody>
+  </table>
+
+
+	Usuarios dados de baja:
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario  in NoHope %}
+      <tr>
+       <td>{{usuario.nombre_usario}} </td>
+       <td> {{usuario.promedio}} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+	Promedio General es : {{PromedioGeneral}}
+
+    </body>
+</html>
