@@ -45,7 +45,7 @@ def JoseCruzEstefaniaAlmanza(request):
             contexto['Reportes']=ModelCruzEstefania.objects.all()
         except Exception, e:
             raise e
-        
+
 
     except Exception, e:
         return render(request, 'Front/JoseCruzEstefaniaAlmanza.html',contexto)
@@ -54,7 +54,7 @@ def JoseCruzEstefaniaAlmanza(request):
 
 class AldoRodriguezMoralesView(TemplateView):
 
-    template_name = "AldoRodriguezMorales.html"
+    template_name = "Front/AldoRodriguezMorales.html"
 
     def get_context_data(self, **kwargs):
         context = super(AldoRodriguezMoralesView, self).get_context_data(**kwargs)
